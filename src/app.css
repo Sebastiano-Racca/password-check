@@ -1,0 +1,16 @@
+:root {
+	--primary-color: #4a90e2;
+	--secondary-color: #f5f7fa;
+	--text-color: #333;
+	--border-radius: 8px;
+	--transition: all 0.3s ease-in-out;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	line-height: 1.6;
+	margin: 0;
+	padding: 0 10px;
+}

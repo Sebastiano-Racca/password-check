@@ -1,0 +1,12 @@
+services:
+  app:
+    image: ghcr.io/sebastiano-racca/password-check:latest
+    env_file: '.env'
+    environment:
+      - ORIGIN="http://localhost:3000"
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./prod.db:/app/prisma/db/prod.db
+    restart: 'unless-stopped'
+    entrypoint: ['sh', '-c', 'pnpm prisma migrate deploy && node build/index.js']
